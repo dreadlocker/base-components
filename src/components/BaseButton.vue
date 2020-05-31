@@ -23,7 +23,8 @@ export default {
   props: {
     text: {
       type: String,
-      default: "Click me!",
+      default: "BUTTON",
+      validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
     },
     onClick: {
       type: Function,
@@ -31,6 +32,7 @@ export default {
     type: {
       type: String,
       default: "button",
+      validator: (val) => (/^button$|^submit$|^reset$/g).test(val)
     },
     classes: {
       type: String,
@@ -38,20 +40,25 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+      validator: (val) => (/^false$|^true$/g).test(val)
     },
     autofocus: {
       type: Boolean,
       default: false,
+      validator: (val) => (/^false$|^true$/g).test(val)
     },
     name: {
       type: String,
+      validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
     },
     value: {
       type: String,
+      validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
     },
     // If the button belongs to a <form> use it's ID
     formId: {
       type: String,
+      validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
     },
     // where to send the form-data
     formactionUrl: {
@@ -60,19 +67,22 @@ export default {
     // how form-data should be encoded
     formenctype: {
       type: String,
+      validator: (val) => (/^application\/x-www-form-urlencoded$|^multipart\/form-data$|^text\/plain$/g).test(val)
     },
-    // get, post
     formmethod: {
       type: String,
+      validator: (val) => (/^get$|^post$/g).test(val)
     },
     // form-data should NOT be validated on submission
     formnovalidate: {
       type: Boolean,
       default: false,
+      validator: (val) => (/^false$|^true$/g).test(val)
     },
     // where to display the response after submitting the form(_blank)
     formtarget: {
       type: String,
+      validator: (val) => (/^_blank$|^_self$|^_parent$|^_top$|^framename$/g).test(val)
     },
   }
 }
