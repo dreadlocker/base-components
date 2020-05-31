@@ -3,7 +3,6 @@
     :type="type"
     :classes="classes"
     :name="name"
-    :value="value"
     class="btn"
   ><slot></slot></button>
 </template>
@@ -23,10 +22,6 @@ export default {
       type: String,
     },
     name: {
-      type: String,
-      validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
-    },
-    value: {
       type: String,
       validator: (val) => (/^[A-Za-z0-9]{1,30}$/g).test(val)
     },
