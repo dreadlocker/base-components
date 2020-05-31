@@ -2,7 +2,6 @@
   <button
     :type="type"
     :classes="classes"
-    :disabled="disabled"
     :name="name"
     :value="value"
     class="btn"
