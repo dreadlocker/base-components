@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <!-- <BaseButton
+      
+    /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import BaseButton from '@/components/BaseButton.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    // BaseButton,
+  },
 }
 </script>
 
 <style lang="sass">
 body
-  margin: 0
+  margin: 5px
 #app
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
